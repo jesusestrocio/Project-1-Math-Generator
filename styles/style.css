@@ -2,13 +2,142 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 12px;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: whitesmoke;
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: whitesmoke; */
+  --background-color:#E7E9EB;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header and Main Section */
+header {
+  border: 1px solid;
+  width: 100%;
+  display: flex;
+  display: block;
+}
+
+h1 , .application-title {
+  border: 1px solid;
+  font-size: initial;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-color);
+
+}
+
+nav {
+  background-color: var(--background-color);
+}
+.arithmetic-operations-button-container {
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 222px) {
+  .arithmetic-operations-button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 370px) {
+  .arithmetic-operations-button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Main Section */
+main, .main-section {
+  border: 1px solid;
+  height: 100%;
+}
+
+/* Timer Section */
+.timer-section {
+  border: 1px solid;
+}
+
+.stopwatch-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--background-color);
+    /* align-content: center;
+    justify-content: center;
+    justify-items: center; */
+}
+.stopwatch-timer {
+  text-align: center;
+  align-content: center;
+
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media only screen and (min-width: 370px) {
+  .stopwatch-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  } 
+}
+
+/* Question Section */
+.question-section {
+  border: 1px solid red;
+
+  /* display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  gap: 10px; */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+  background-color:#e4dee3;
+
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.individual-question-container {
+  border: 1px solid;
+  width: fit-content;
+  background-color: var(--background-color);
+  text-align: center;
+  margin: 10px;
+}
+
+.individual-question-container > div {
+  padding: 5px;
+}
+
+.user-input-value {
+  text-align: center;
+  width: 40px;
+  height: 15px;
+}
+/* Hide This Section */
+
+.hide-this-section {
+  display: none;
 }
