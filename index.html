@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,87 +9,97 @@
 
 
     <title>Math Generator</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <header>
-      <h1 class="application-title"> Math Problem Generator</h1>
-      <nav>
-        <div class="arithmetic-operations-button-container">
-          <button class="addition">Addition</button>
-          <button class="subtraction">Subtraction</button>
-          <button class="multiplication">Multiplication</button>
-          <button class="division">Division</button>
-          </div>
-      </nav>
+        <h1 class="application-title"> Math Problem Generator</h1>
+        <nav>
+            <div class="arithmetic-operations-button-container">
+                <button class="addition">Addition</button>
+                <button class="subtraction">Subtraction</button>
+                <button class="multiplication">Multiplication</button>
+                <button class="division">Division</button>
+            </div>
+        </nav>
     </header>
 
     <main class="main-section">
-      <!-- Timer Section -->
-      <section class="timer-section">
-        <div class="timer-container">
-          <div class="stopwatch-container" id="sw" >
-            <div class="stopwatch-timer" id="stopwatch-timer-id">00:00:00</div>
-            <button class="stopwatch-start-button" onclick="startStopwatch()">Start</button>
-            <button class="stopwatch-stop-button" onclick="stopStopwatch()">Stop</button>
-            <button class="stopwatch-reset-button" id="stopwatch-reset-button-id"  onclick="resetStopwatch()">Reset</button>
+
+        <!-- Timer Section -->
+        <section class="timer-section">
+            <div class="timer-container">
+                <div class="stopwatch-container" id="sw">
+                    <div class="stopwatch-timer" id="stopwatch-timer-id">00:00:00</div>
+                    <button class="stopwatch-start-button" onclick="startStopwatch()">Start</button>
+                    <button class="stopwatch-stop-button" onclick="stopStopwatch()">Stop</button>
+                    <button class="stopwatch-reset-button" id="stopwatch-reset-button-id" onclick="resetStopwatch()">Reset</button>
+                </div>
             </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Question Section -->
-      <section class="question-section">
-        <div class='individual-question-container'>
-          <div class='first-number'><p class="first-number-dynamic-input">1</p></div> 
-          <div class='symbol'><p class="symbol-dynamic-input">+</p></div>
-          <div class='second-number'><p class="second-number-dynamic-input">1</p></div>
-          <div class='user-input-section'><input type="number" class="user-input-value" id="user-input-value-id" required></div>
-          <div class='user-input-button-section'><button class="user-input-validation-button" id="user-input-validation-button-id">Check</button></div>
-        </div>
-<!-- Check All Button Is Missing  -->
-      </section>
+        <!-- Question Section -->
+        <section class="question-section">
+            <!-- Check All Button Is Missing  -->
+        </section>
 
-      <section class="hide-this-section">
+        <section class="user-pop-up-window-section">
+            <!-- User Input Pop Up Window -->
+            <div class="pop-up-window" id="pop-up-window-id">
+                <h5 class="title-for-pop-up-form">Add</h5>
+                <form action="" class="pop-up-form-container">
+                    <label class="no-of-digits-label">No of digits</label>
+                    <input type="number" min="1" max="5" class="no-of-digits-input" required>
 
-      <!-- User Input Pop Up Window -->
-      <div class="pop-up-window" id="pop-up-window-id">
-        <h2 class="title-for-pop-up-form"></h2>
-        <form action="" class="pop-up-form-container">
-          <label class="no-of-digits-label">No of digits</label>
-          <input type="number"  placeholder="No Of Digits" class="no-of-digits-input" required>
-      
-          <label class="no-of-problems-label">No of problems</label>
-          <input type="number"  placeholder="No Of Problems" class="no-of-problems-input" required>
-      
-          <button type="button" class="generate-form-button">Generate</button>
-          <button type="button" class="close-form-button" onclick="closePopUpForm()">Close</button>
-        </form>
-      </div>
+                    <label class="no-of-problems-label">No of problems</label>
+                    <input type="number" min="0" step="5" max="5" class="no-of-problems-input" required>
 
-      <!-- Timer Setting Pop Up Window -->
-      <div class="timer-setting-container">
-        <h3 class="timer-setting-title">Timer Settings</h3>
-        <button class="manual-timer-button">Manual<div class="manual-information-icon">i</div></button>
-        <button class="automatic-timer-button">Automatic<div class="automatic-information-icon">i</div></button>
-      </div>
+                    <button type="button" class="generate-form-button">Generate</button>
+                    <button type="button" class="close-form-button" onclick="closePopUpForm()">Close</button>
+                </form>
+            </div>
+        </section>
 
-      <!-- Error Message Pop Up Window -->
-      <div class="error-message-container">
-        <p class="error-message-output">! !Enter in All Input Fields</p>
-      </div>
+        <section class="timer-setting-pop-up-window-section">
+            <!-- Timer Setting Pop Up Window -->
+            <div class="timer-setting-container">
+                <h5 class="timer-setting-title">Timer Settings</h5>
+                <button class="manual-timer-button">Manual
+                    <div class="manual-information-icon">i</div>
+                </button>
+                <button class="automatic-timer-button">Automatic
+                    <div class="automatic-information-icon">i</div>
+                </button>
+            </div>
+        </section>
 
-      <!-- Score Board Container -->
-      <div class="users-scoreboard-container">
-        <h5 class="user-scoreboard-title"> User's Scoreboard</h5>
-        <p class="users-scoreboard-output"></p>
-      </div>
+        <section class="error-message-pop-up-window-section">
+            <!-- Error Message Pop Up Window -->
+            <div class="error-message-container">
+                <p class="error-message-output">!Enter In All Input Fields</p>
+            </div>
+        </section>
 
-      <!-- Not Sure Yet -->
-      <div class="printable-answers-to-quesitons"></div>
-      </section>
+        <section class="scoreboard-pop-up-window-section">
+            <!-- Score Board Container -->
+            <div class="users-scoreboard-container">
+                <h5 class="user-scoreboard-title"> User's Scoreboard</h5>
+                <p class="users-scoreboard-output">Jesus Estrocio</p>
+                <p class="users-scoreboard-output"> 00:00:00 </p>
+                <p class="users-scoreboard-output"> 12 Questions Answered</p>
+            </div>
+        </section>
+
+        <section class="hide-this-section temporary section">
+            <!-- Not Sure Yet -->
+            <div class="printable-answers-to-quesitons"></div>
+        </section>
 
     </main>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+    <!-- <script type="module" src="main.js"></script> -->
+    <script src="main.js"></script>
+</body>
+
 </html>

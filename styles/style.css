@@ -63,6 +63,8 @@ nav {
 main, .main-section {
   border: 1px solid;
   height: 100%;
+  background-color: red;
+
 }
 
 /* Timer Section */
@@ -100,11 +102,6 @@ main, .main-section {
 /* Question Section */
 .question-section {
   border: 1px solid red;
-
-  /* display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto;
-  gap: 10px; */
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -112,8 +109,8 @@ main, .main-section {
   justify-items: center;
   margin: 10px;
   background-color:#e4dee3;
-
 }
+
 p {
   margin: 0;
   padding: 0;
@@ -138,6 +135,123 @@ p {
 }
 /* Hide This Section */
 
+/* User Input Pop Up Window */
+
+.pop-up-window {
+  display: none;
+  border: 1px solid;
+  margin: 10px;
+  --height:fit-content;
+  --width:fit-content;
+  height: var(--height);
+  width: var(--width);
+  background-color: cadetblue;
+}
+
+.title-for-pop-up-form {
+  margin: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.pop-up-form-container {
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 5px;
+}
+.no-of-digits-input, .no-of-problems-input {
+  width: 100px;
+}
+@media only screen and (min-width: 304px) {
+
+  .pop-up-form-container {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+  }
+
+}
+
 .hide-this-section {
   display: none;
+}
+
+.timer-section {
+  display: none;
+}
+
+/* Timer Setting Pop Up Window */
+.timer-setting-container {
+  display: none;
+  /* display: flex; */
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: moccasin;
+  border: 1px solid darkolivegreen;
+  --height: fit-content;
+  --width: fit-content;
+  height: var(--height);
+  width: var(--width);
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.timer-setting-title {
+  display: flex;
+  justify-content: center;
+}
+
+/* Error Message Pop Up Window */
+.error-message-container {
+  background-color: plum;
+  border: 1px solid;
+  --height: fit-content;
+  --width: fit-content;
+  height: var(--height);
+  width: var(--width);
+  display: none;
+
+}
+.error-message-output {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* User Scoreboard Pop Up Window */
+
+.users-scoreboard-container {
+  background-color: khaki;
+  border: 1px solid;
+  --height: fit-content;
+  --width: fit-content;
+  height: var(--height);
+  width: var(--width);
+  /* display: none; */
+
+}
+
+/* .users-scoreboard-container {
+} */
+
+.user-scoreboard-title {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.users-scoreboard-output {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+
 }
