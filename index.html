@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css">
 
-
     <title>Math Generator</title>
 </head>
 
@@ -53,7 +52,14 @@
                     <input type="number" min="1" max="5" class="no-of-digits-input" required>
 
                     <label class="no-of-problems-label">No of problems</label>
-                    <input type="number" min="0" step="5" max="5" class="no-of-problems-input" required>
+                    <input type="number" min="0" max="5" class="no-of-problems-input" required>
+
+                    <label for="automatic">Automatic Timer</label><br>
+                    <input type="radio" class="radio-button" id="automatic-id" name="timer-selection" value="automatic">
+
+                    <label for="manual">Manual Timer</label><br>
+                    <input type="radio" class="radio-button" id="manual-id" name="timer-selection" value="manual" checked>
+
 
                     <button type="button" class="generate-form-button">Generate</button>
                     <button type="button" class="close-form-button" onclick="closePopUpForm()">Close</button>
@@ -77,17 +83,17 @@
         <section class="error-message-pop-up-window-section">
             <!-- Error Message Pop Up Window -->
             <div class="error-message-container">
-                <p class="error-message-output">!Enter In All Input Fields</p>
+                <p class="error-message-output"></p>
             </div>
         </section>
 
         <section class="scoreboard-pop-up-window-section">
             <!-- Score Board Container -->
             <div class="users-scoreboard-container">
-                <h5 class="user-scoreboard-title"> User's Scoreboard</h5>
-                <p class="users-scoreboard-output">Jesus Estrocio</p>
+                <!-- <h5 class="user-scoreboard-title"> User's Scoreboard</h5> -->
+                <!-- <p class="users-scoreboard-output">Jesus Estrocio</p>
                 <p class="users-scoreboard-output"> 00:00:00 </p>
-                <p class="users-scoreboard-output"> 12 Questions Answered</p>
+                <p class="users-scoreboard-output"> 12 Questions Answered</p> -->
             </div>
         </section>
 
@@ -100,6 +106,8 @@
 
     <!-- <script type="module" src="main.js"></script> -->
     <script src="main.js"></script>
+    <script src="main-automatic-timer.js"></script>
+
 </body>
 
 </html>
